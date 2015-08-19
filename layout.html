@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width">
+    <meta name="description" content="сайт на джейде">
+    <link rel="stylesheet" type="text/css" href="css/normalize.css" media="screen, projection, print">
+    <link rel="stylesheet" type="text/css" href="css/screen.css" media="screen, projection, print">
+    <link rel="stylesheet" href="fonts/elektra.css">
+  </head>
+  <title>JADE SITE</title>
+  <script src="//"></script>
+  <body>
+    <div class="wrapper">
+      <div class="main-content">
+        <div class="container">
+          <aside class="left-column">
+            <div class="header-logo"><a href="index.html" class="header-logo__link"><img src="img/logo-main.png" alt="logo"><span class="header-logo__text">Эппл Шоп</span></a></div>
+            <div class="callback-form-wrap">
+              <div class="callback-form-wrap__head">Заказать звонок</div>
+              <div class="callback-form-wrap__body">
+                <form id="callback-form">
+                  <div class="callback-form-group">
+                    <label for="urName" class="callback-form-group__label">Ваше имя</label>
+                    <input type="text" name="urName" id="urName" placeholder="Константин" qtip-content="Вы не ввели имя" class="callback-form-group__input callback-form-group__input_short-input">
+                  </div>
+                  <div class="callback-form-group">
+                    <label for="urPhone" class="callback-form-group__label">Телефон</label>
+                    <input type="text" name="urName" id="urPhone" placeholder="+7 (912)000-00-00" qtip-content="Вы не указали телефон" class="callback-form-group__input callback-form-group__input_short-input">
+                  </div>
+                  <div class="callback-form-group">
+                    <label for="callbackDate" class="callback-form-group__label">Дата звонка</label>
+                    <select id="callbackDate" name="callbackDate" tabindex="1" form="callback-form">
+                      <option value="01">01</option>
+                      <option value="02">02</option>
+                      <option value="03">03</option>
+                      <option value="04">04</option>
+                      <option value="05">05</option>
+                      <option value="06">06</option>
+                      <option value="07">07</option>
+                      <option value="08">08</option>
+                      <option value="09">09</option>
+                      <option value="10">10</option>
+                      <option value="11">11</option>
+                      <option value="12">12</option>
+                      <option value="13">13</option>
+                      <option value="14">14</option>
+                      <option value="15">15</option>
+                      <option value="16">16</option>
+                      <option value="17">17</option>
+                      <option value="18">18</option>
+                      <option value="19">19</option>
+                      <option value="20">20</option>
+                      <option value="21">21</option>
+                      <option value="22">22</option>
+                      <option value="23">23</option>
+                      <option value="24">24</option>
+                      <option value="25">25</option>
+                      <option value="26">26</option>
+                      <option value="27">27</option>
+                      <option value="28">28</option>
+                      <option value="29">29</option>
+                      <option value="30">30</option>
+                      <option value="31">31</option>
+                    </select>
+                    <select name="callbackMonth" tabindex="2" form="callback-form">
+                      <option value="January">01</option>
+                      <option value="February">02</option>
+                      <option value="March">03</option>
+                      <option value="April">04</option>
+                      <option value="May">05</option>
+                      <option value="June">06</option>
+                      <option value="July">07</option>
+                      <option value="August">08</option>
+                      <option value="September">09</option>
+                      <option value="October">10</option>
+                      <option value="November">11</option>
+                      <option value="December">12</option>
+                    </select>
+                  </div>
+                  <div class="callback-form-group">
+                    <textarea name="comment" rows="3" placeholder="Комментарий" qtip-content="Вы не ввели комментарий" class="callback-form-group__textarea"></textarea>
+                  </div>
+                  <div class="callback-form-btn-group">
+                    <button type="submit" class="callback-form-btn-group__btn callback-form-btn-group__btn_blue">Отправить</button>
+                    <button type="reset" class="callback-form-btn-group__btn callback-form-btn-group__btn_grey">Очистить</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+            <div class="gallery-wrap">
+              <ul class="gallery-list">
+                <li class="gallery-list__item"><img src="img/gallery_01.jpg" alt="картинка природы" class="gallery-img"></li>
+                <li class="gallery-list__item"><img src="img/gallery_02.jpg" alt="картинка природы" class="gallery-img"></li>
+                <li class="gallery-list__item"><img src="img/gallery_03.jpg" alt="картинка природы" class="gallery-img"></li>
+                <li class="gallery-list__item"><img src="img/gallery_04.jpg" alt="картинка природы" class="gallery-img"></li>
+                <li class="gallery-list__item"><img src="img/gallery_05.jpg" alt="картинка природы" class="gallery-img"></li>
+                <li class="gallery-list__item"><img src="img/gallery_06.jpg" alt="картинка природы" class="gallery-img"></li>
+                <li class="gallery-list__item"><img src="img/gallery_07.jpg" alt="картинка природы" class="gallery-img"></li>
+                <li class="gallery-list__item"><img src="img/gallery_08.jpg" alt="картинка природы" class="gallery-img"></li>
+                <li class="gallery-list__item"><img src="img/gallery_09.jpg" alt="картинка природы" class="gallery-img"></li>
+              </ul>
+            </div>
+            <adress class="contacts">
+              <ul class="adress-list">
+                <li class="adress-list__item adress-list__item_adress"> г. Москва, ул. Новая 246, офис 214.</li>
+                <li class="adress-list__item_phone adress-list__item"><a href="tel:+79034658687" class="item_phone__link">+7(921) 322-12-32</a></li>
+              </ul>
+            </adress>
+          </aside>
+          <div class="right-column">
+            <div class="hero-slider">
+              <div id="slides">
+                <btn id="prev" class="slidesjs-previous slidesjs-navigation btn-slide-prev">Пред.</btn>
+                <btn id="next" class="slidesjs-next slidesjs-navigation btn-slide-next">След.</btn>
+                <div class="hero-slider__slide">
+                  <div class="slide-info"><a href="#" class="slide-info__header">iMac за пол цены</a><span class="slide-info__body">Принеси свой старый Mac и получи скидку на новый!</span></div><img src="img/slide_01.jpg" alt="акция 1">
+                </div>
+                <div class="hero-slider__slide">
+                  <div class="slide-info"><a href="#" class="slide-info__header">До 31 декабря, iPhone 4 за 9900 руб.</a><span class="slide-info__body">Нет денег на шестой iPhone? Купи себе четвертый!</span></div><img src="img/slide_02.jpg" alt="акция 2">
+                </div>
+                <div class="hero-slider__slide">
+                  <div class="slide-info"><a href="#" class="slide-info__header">iMac за пол цены</a><span class="slide-info__body">Принеси свой старый Mac и получи скидку на новый!</span></div><img src="img/slide_03.jpg" alt="акция 3">
+                </div>
+              </div>
+            </div>
+            <div class="good-box">
+              <div class="goods-box__head"><span class="good-heading-span">
+                  <h1 class="goods-heading">Популярные товары</h1></span></div>
+              <div class="goods-box__body">
+                <ul>
+                  <li class="goods-item">
+                    <div class="good">
+                      <div class="item-img-wrap">
+                        <div class="item-img-box"><img src="img/item_01.jpg" alt="фото товара" class="item-pic"></div>
+                      </div>
+                      <div class="item-name"><a href="#" class="good-link">Apple Thunderbolt Display 27"</a></div>
+                    </div>
+                    <ul class="item-specs">
+                      <li class="item-spec">
+                        <div class="item-spec-name">Артикул</div>
+                        <div class="item-spec-value">42787825</div>
+                      </li>
+                      <li class="item-spec">
+                        <div class="item-spec-name">Опция</div>
+                        <div class="item-spec-value">включена</div>
+                      </li>
+                      <li class="item-spec">
+                        <div class="item-spec-name">Цвет</div>
+                        <div class="item-spec-value">серебристый</div>
+                      </li>
+                      <li class="item-spec">
+                        <div class="item-spec-name">Размер</div>
+                        <div class="item-spec-value">1280*1245*90</div>
+                      </li>
+                      <li class="item-spec">
+                        <div class="item-spec-name">Вес</div>
+                        <div class="item-spec-value">9 кг</div>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="goods-item">
+                    <div class="good">
+                      <div class="item-img-wrap">
+                        <div class="item-img-box"><img src="img/item_02.jpg" alt="фото товара" class="item-pic"></div>
+                      </div>
+                      <div class="item-name"><a href="#" class="good-link">iMac 27"</a></div>
+                    </div>
+                    <ul class="item-specs">
+                      <li class="item-spec">
+                        <div class="item-spec-name">Артикул</div>
+                        <div class="item-spec-value">42787825</div>
+                      </li>
+                      <li class="item-spec">
+                        <div class="item-spec-name">Опция</div>
+                        <div class="item-spec-value">включена</div>
+                      </li>
+                      <li class="item-spec">
+                        <div class="item-spec-name">Цвет</div>
+                        <div class="item-spec-value">серебристый</div>
+                      </li>
+                      <li class="item-spec">
+                        <div class="item-spec-name">Размер</div>
+                        <div class="item-spec-value">1280*1245*90</div>
+                      </li>
+                      <li class="item-spec">
+                        <div class="item-spec-name">Вес</div>
+                        <div class="item-spec-value">9 кг</div>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="goods-item">
+                    <div class="good">
+                      <div class="item-img-wrap">
+                        <div class="item-img-box"><img src="img/item_03.jpg" alt="фото товара" class="item-pic"></div>
+                      </div>
+                      <div class="item-name"><a href="#" class="good-link">iPhone 5s Gold</a></div>
+                    </div>
+                    <ul class="item-specs">
+                      <li class="item-spec">
+                        <div class="item-spec-name">Артикул</div>
+                        <div class="item-spec-value">42787825</div>
+                      </li>
+                      <li class="item-spec">
+                        <div class="item-spec-name">Опция</div>
+                        <div class="item-spec-value">включена</div>
+                      </li>
+                      <li class="item-spec">
+                        <div class="item-spec-name">Цвет</div>
+                        <div class="item-spec-value">серебристый</div>
+                      </li>
+                      <li class="item-spec">
+                        <div class="item-spec-name">Размер</div>
+                        <div class="item-spec-value">1280*1245*90</div>
+                      </li>
+                      <li class="item-spec">
+                        <div class="item-spec-name">Вес</div>
+                        <div class="item-spec-value">9 кг</div>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="good-box">
+              <div class="goods-box__head"><span class="good-heading-span">
+                  <h1 class="goods-heading">Товары со скидкой</h1></span></div>
+              <div class="goods-box__body">
+                <ul>
+                  <li class="goods-item">
+                    <div class="good">
+                      <div class="item-img-wrap">
+                        <div class="item-img-box"><img src="img/item_04.jpg" alt="фото товара" class="item-pic"></div>
+                      </div>
+                      <div class="item-name"><a href="#" class="good-link">iPad Air Wi-Fi 128GB - Silver</a></div>
+                    </div>
+                    <ul class="item-specs">
+                      <li class="item-spec">
+                        <div class="item-spec-name">Артикул</div>
+                        <div class="item-spec-value">42787825</div>
+                      </li>
+                      <li class="item-spec">
+                        <div class="item-spec-name">Опция</div>
+                        <div class="item-spec-value">включена</div>
+                      </li>
+                      <li class="item-spec">
+                        <div class="item-spec-name">Цвет</div>
+                        <div class="item-spec-value">серебристый</div>
+                      </li>
+                      <li class="item-spec">
+                        <div class="item-spec-name">Размер</div>
+                        <div class="item-spec-value">1280*1245*90</div>
+                      </li>
+                      <li class="item-spec">
+                        <div class="item-spec-name">Вес</div>
+                        <div class="item-spec-value">9 кг</div>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="goods-item">
+                    <div class="good">
+                      <div class="item-img-wrap">
+                        <div class="item-img-box"><img src="img/item_05.jpg" alt="фото товара" class="item-pic"></div>
+                      </div>
+                      <div class="item-name"><a href="#" class="good-link">Apple iPod nano 7G 16 ГБ Blue</a></div>
+                    </div>
+                    <ul class="item-specs">
+                      <li class="item-spec">
+                        <div class="item-spec-name">Артикул</div>
+                        <div class="item-spec-value">42787825</div>
+                      </li>
+                      <li class="item-spec">
+                        <div class="item-spec-name">Опция</div>
+                        <div class="item-spec-value">включена</div>
+                      </li>
+                      <li class="item-spec">
+                        <div class="item-spec-name">Цвет</div>
+                        <div class="item-spec-value">серебристый</div>
+                      </li>
+                      <li class="item-spec">
+                        <div class="item-spec-name">Размер</div>
+                        <div class="item-spec-value">1280*1245*90</div>
+                      </li>
+                      <li class="item-spec">
+                        <div class="item-spec-name">Вес</div>
+                        <div class="item-spec-value">9 кг</div>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="goods-item">
+                    <div class="good">
+                      <div class="item-img-wrap">
+                        <div class="item-img-box"><img src="img/item_06.jpg" alt="фото товара" class="item-pic"></div>
+                      </div>
+                      <div class="item-name"><a href="#" class="good-link">Роутер Wi-Fi Apple AirPort</a></div>
+                    </div>
+                    <ul class="item-specs">
+                      <li class="item-spec">
+                        <div class="item-spec-name">Артикул</div>
+                        <div class="item-spec-value">42787825</div>
+                      </li>
+                      <li class="item-spec">
+                        <div class="item-spec-name">Опция</div>
+                        <div class="item-spec-value">включена</div>
+                      </li>
+                      <li class="item-spec">
+                        <div class="item-spec-name">Цвет</div>
+                        <div class="item-spec-value">серебристый</div>
+                      </li>
+                      <li class="item-spec">
+                        <div class="item-spec-name">Размер</div>
+                        <div class="item-spec-value">1280*1245*90</div>
+                      </li>
+                      <li class="item-spec">
+                        <div class="item-spec-name">Вес</div>
+                        <div class="item-spec-value">9 кг</div>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer class="footer-main">
+      <div class="footer">
+        <div class="container">
+          <div class="footer-logo-wrap"><img src="img/logo_footer.png" class="footer-logo"></div>
+          <div class="footer-menu">
+            <ul class="menu-list-outter">
+              <li class="menu-list-outter__item">О магазине
+                <ul class="menu-list-inner">
+                  <li class="menu-list-inner__item"><a href="#" class="menu-list-inner__a">О нас</a></li>
+                  <li class="menu-list-inner__item"><a href="#" class="menu-list-inner__a">Наши цены</a></li>
+                  <li class="menu-list-inner__item"><a href="#" class="menu-list-inner__a">Наши скидки</a></li>
+                  <li class="menu-list-inner__item"><a href="#" class="menu-list-inner__a">Акции</a></li>
+                </ul>
+              </li>
+              <li class="menu-list-outter__item">Каталог
+                <ul class="menu-list-inner">
+                  <li class="menu-list-inner__item"><a href="#" class="menu-list-inner__a">Смартфоны</a></li>
+                  <li class="menu-list-inner__item"><a href="#" class="menu-list-inner__a">Планшеты</a></li>
+                  <li class="menu-list-inner__item"><a href="#" class="menu-list-inner__a">Компьютеры</a></li>
+                  <li class="menu-list-inner__item"><a href="#" class="menu-list-inner__a">Аксессуары</a></li>
+                </ul>
+              </li>
+              <li class="menu-list-outter__item">Контакты
+                <ul class="menu-list-inner">
+                  <li class="menu-list-inner__item"><a href="#" class="menu-list-inner__a">Телефоны</a></li>
+                  <li class="menu-list-inner__item"><a href="#" class="menu-list-inner__a">Адреса</a></li>
+                  <li class="menu-list-inner__item"><a href="#" class="menu-list-inner__a">Карта проезда</a></li>
+                  <li class="menu-list-inner__item"><a href="#" class="menu-list-inner__a">Обратная связь</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+          <div class="footer-links-wrap">
+            <div class="links-stores">
+              <ul class="links-stores__list">
+                <li class="links-stores__item"><a href="http://itunes.apple.com/ru/genre/ios/id36?mt=8" class="app-store">APP STORE</a></li>
+                <li class="links-stores__item"><a href="https://play.google.com/store?hl=ru" class="gplay">GPLAY</a></li>
+              </ul>
+            </div>
+            <div class="links-socials">
+              <ul class="links-socials__list">
+                <li class="links-socials__item"><a href="#" class="vk">VK</a></li>
+                <li class="links-socials__item"><a href="#" class="fb">FB</a></li>
+                <li class="links-socials__item"><a href="#" class="tw">TW</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <script src="js/jquery.slides.min.js"></script>
+    <script>
+      $(function(){
+        $("#slides").slidesjs({
+          width: 740,
+          height: 300,
+          pagination: {
+              active: false,
+              effect: "slide"
+              },
+          navigation: {
+            active: false,
+            effect: "slide"
+          }
+      
+        });
+        $('#next').hover(
+                 function(){ $(this).addClass('next-hv') },
+                 function(){ $(this).removeClass('next-hv') }
+          );
+        $('#prev').hover(
+                 function(){ $(this).addClass('prev-hv') },
+                 function(){ $(this).removeClass('prev-hv') }
+          );
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,23 @@
+@font-face {
+    font-family: 'Conv_ElektraTextLight';
+    src: url('ElektraTextLight.eot');
+    src: local('☺'), url('ElektraTextLight.woff') format('woff'), url('ElektraTextLight.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Conv_ElektraText';
+    src: url('ElektraText.eot');
+    src: local('☺'), url('ElektraText.woff') format('woff'), url('ElektraText.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Conv_ElektraTextBold';
+    src: url('fonts/ElektraTextBold.eot');
+    src: local('☺'), url('ElektraTextBold.woff') format('woff'), url('ElektraTextBold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
