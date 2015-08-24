@@ -1,1 +1,1 @@
-git clone https://github.com/Galuev/dz_two.git site
+git clone https://github.com/Galuev/apple_store.git site

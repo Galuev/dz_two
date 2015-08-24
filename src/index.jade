@@ -1,0 +1,212 @@
+doctype html
+- var count = 1
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"><![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"><![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"><![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"><![endif]-->
+html
+    head
+        meta(http-equiv='Content-Type', content='text/html; charset=utf-8')
+        meta(name="viewport" content="width=device-width")
+        meta(name="description" content="сайт на jade & sass")
+        link(rel='stylesheet' type='text/css' href='bower/normalize.css/normalize.css' media='screen, projection, print')
+        link(rel='stylesheet' type='text/css' href='css/main.css' media='screen, projection, print')
+        link(rel='stylesheet' type='text/css' href='css/selecter.css' media='screen, projection, print')
+        link(link href="css/jquery.bxslider.css" rel="stylesheet")
+        link(rel="stylesheet" href="fonts/elektra.css")
+        link(rel="stylesheet" href="css/jquery.qtip.css")
+        link(rel="shortcut icon" href="favicon.ico" type="image/x-icon")
+        link(rel="icon" href="favicon.ico" type="image/x-icon")
+        script(src="bower/modernizr/modernizr.js")
+    title
+        | JADE SITE
+    script(src="//")
+    body
+        .wrapper
+            .main-content
+                .container
+                    aside.left-column
+                        .header-logo
+                            a(href="index.html" class="header-logo__link")
+                                img(src="img/logo-main.png" alt="logo")
+                                span.header-logo__text Эппл Шоп
+                        .callback-form-wrap
+                            .callback-form-wrap__head Заказать звонок
+                            .callback-form-wrap__body
+                                 form#callback-form
+                                    .callback-form-group
+                                        label(for="urName" class="callback-form-group__label") Ваше имя
+                                        input(type="text" name="urName" class="callback-form-group__input callback-form-group__input_short-input" id="urName" placeholder="Константин" qtip-content="Вы не ввели имя" qtip-position="right")
+                                    .callback-form-group
+                                        label(for="urPhone" class="callback-form-group__label") Телефон
+                                        input(type="text" name="urName" class="callback-form-group__input callback-form-group__input_short-input" id="urPhone" placeholder="+7 (912)000-00-00" qtip-content="Вы не указали телефон" qtip-position="right")
+                                    .callback-form-group
+                                        label(for="callbackDate" class="callback-form-group__label") Дата звонка
+                                        select(id="callbackDate" name="callbackDate" tabindex="1" form="callback-form" class="scroll-pane" qtip-content="Вы не ввели комментарий" qtip-position="right")
+                                             - for (var i = 01; i <=31; i++)
+                                                if (i < 10)
+                                                    option(value=i)= '0' + i
+                                                else
+                                                    option(value=i)= i
+                                        select(name="callbackMonth" tabindex="2" form="callback-form" qtip-content="Вы не ввели комментарий" qtip-position="right")
+                                            - for (var i = 01; i <=12; i++)
+                                                if (i < 10)
+                                                    option(value=i)= '0' + i
+                                                else
+                                                    option(value=i)= i
+                                    .callback-form-group
+                                        textarea(name="comment" class="callback-form-group__textarea" rows="3" placeholder="Комментарий" qtip-content="Вы не ввели комментарий" qtip-position="right")
+                                    .callback-form-btn-group
+                                        button(type="submit" class="callback-form-btn-group__btn callback-form-btn-group__btn_blue") Отправить
+                                        button(type="reset" class="callback-form-btn-group__btn callback-form-btn-group__btn_grey") Очистить
+                        .gallery-wrap
+                            ul.gallery-list
+                                - for (var i = 1; i <= 9; i++)
+                                    li.gallery-list__item
+                                        img(src="img/gallery_0" + i + ".jpg").gallery-img
+
+                        adress.contacts
+                            ul.adress-list
+                                li.adress-list__item.adress-list__item_adress  г. Москва, ул. Новая 246, офис 214.
+                                li.adress-list__item_phone.adress-list__item
+                                    a(href="tel:+79034658687" class="item_phone__link") +7(921) 322-12-32
+
+                    .right-column
+                        .hero-slider
+                            ul.bxslider
+                                li.hero-slider__slide
+                                    .slide-info
+                                        a(href="#" class="slide-info__header") iMac за пол цены
+                                        span.slide-info__body Принеси свой старый Mac и получи скидку на новый!
+                                    img(src="img/slide_01.jpg" alt="акция 1")
+                                li.hero-slider__slide
+                                    .slide-info
+                                        a(href="#" class="slide-info__header") До 31 декабря, iPhone 4 за 9900 руб.
+                                        span.slide-info__body Нет денег на шестой iPhone? Купи себе четвертый!
+                                    img(src="img/slide_02.jpg" alt="акция 2")
+                                li.hero-slider__slide
+                                    .slide-info
+                                        a(href="#" class="slide-info__header") iMac за пол цены
+                                        span.slide-info__body Принеси свой старый Mac и получи скидку на новый!
+                                    img(src="img/slide_03.jpg" alt="акция 3")
+
+                        .good-box
+                            .goods-box__head
+                                span.good-heading-span
+                                    h1.goods-heading Популярные товары
+                            .goods-box__body
+                                ul
+                                    each title in ['Apple Thunderbolt Display 27"','iMac 27"','iPhone 5s Gold']
+                                        li.goods-item
+                                            .good
+                                                .item-img-wrap
+                                                    .item-img-box
+                                                        img(src="img/item_0" + count++ + ".jpg" class='item-pic' alt="фото товара")
+                                                .item-name
+                                                    .item-name__inner
+                                                        a(href="#" class="good-link") #{title}
+                                            ul.item-specs
+                                                li.item-spec
+                                                    .item-spec-name Артикул
+                                                    .item-spec-value 42787825
+                                                li.item-spec
+                                                    .item-spec-name Опция
+                                                    .item-spec-value включена
+                                                li.item-spec
+                                                    .item-spec-name Цвет
+                                                    .item-spec-value серебристый
+                                                li.item-spec
+                                                    .item-spec-name Размер
+                                                    .item-spec-value 1280*1245*90
+                                                li.item-spec
+                                                    .item-spec-name Вес
+                                                    .item-spec-value 9 кг
+                        .good-box
+                            .goods-box__head
+                                span.good-heading-span
+                                    h1.goods-heading Товары со скидкой
+                            .goods-box__body
+                                ul
+                                    each title in ['iPad Air Wi-Fi 128GB - Silver','Apple iPod nano 7G 16 ГБ Blue','Роутер Wi-Fi Apple AirPort']
+                                        li.goods-item
+                                            .good
+                                                .item-img-wrap
+                                                    .item-img-box
+                                                        img(src="img/item_0" + count++ + ".jpg" class='item-pic' alt="фото товара")
+                                                .item-name
+                                                    .item-name__inner
+                                                        a(href="#" class="good-link") #{title}
+                                            ul.item-specs
+                                                li.item-spec
+                                                    .item-spec-name Артикул
+                                                    .item-spec-value 42787825
+                                                li.item-spec
+                                                    .item-spec-name Опция
+                                                    .item-spec-value включена
+                                                li.item-spec
+                                                    .item-spec-name Цвет
+                                                    .item-spec-value серебристый
+                                                li.item-spec
+                                                    .item-spec-name Размер
+                                                    .item-spec-value 1280*1245*90
+                                                li.item-spec
+                                                    .item-spec-name Вес
+                                                    .item-spec-value 9 кг
+            .btnup_container
+                #toTop.whitecolor Наверх
+        include _dev/_makeups/_common/_footer
+
+        script(src='https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js')
+        script.
+            window.jQuery || document.write('<script src="bower/jquery/jquery.min.js">')
+        script(src='bower/selecter/src/jquery.fs.selecter.js')
+
+        script.
+                $(document).ready(function(){
+                    $('select').selecter();
+                });
+
+
+        script(src='js/jquery.bxslider.js')
+        script.
+            $(document).ready(function(){
+                $('.bxslider').bxSlider({
+                    pager: false,
+                    auto: true
+                    });
+            });
+
+
+        script.
+            $(function() {
+
+            $(document).ready(function(){
+                $('#toTop').addClass('btnup');
+            });
+
+            $(window).scroll(function() {
+
+            if($(this).scrollTop() != 0) {
+
+            $('#toTop').fadeIn();
+
+            } else {
+
+            $('#toTop').fadeOut();
+
+            }
+
+            });
+
+            $('#toTop').click(function() {
+
+            $('body,html').animate({scrollTop:0},800);
+
+            });
+
+            });
+
+        script(src='bower/jquery-placeholder/jquery.placeholder.min.js')
+        script.
+            $('input, textarea').placeholder({ customClass: 'my-placeholder' });
+

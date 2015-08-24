@@ -1,0 +1,51 @@
+/** RESET AND LAYOUT
+===================================*/
+
+.bx-wrapper {
+	position: relative;
+	margin-top: 40px;
+	margin: 0 auto 60px;
+	padding: 0;
+	zoom: 1;
+}
+
+.bx-wrapper img {
+	max-width: 100%;
+	display: block;
+}
+
+/* DIRECTION CONTROLS (NEXT / PREV) */
+
+.bx-wrapper .bx-prev {
+	left: 15px;
+	padding-left: 5px;
+	background: url(../img/slider/prev_btn.png) no-repeat 0px -38px;
+}
+.bx-wrapper .bx-next {
+	right: 15px;
+	padding-right: 7px;
+	background: url(../img/slider/next_btn.png) no-repeat 0px -38px;
+}
+.bx-wrapper .bx-next:hover {
+	background-position: 0px 0px;
+	color: #fff;
+}
+.bx-wrapper .bx-prev:hover {
+	background-position: 0px 0px;
+	color: #fff;
+}
+.bx-wrapper .bx-controls-direction a {
+	font-family: 'Conv_ElektraText';
+	text-decoration: none;
+	position: absolute;
+	top: 50%;
+	margin-top: -17px;
+	outline: 0;
+	z-index: 9999;
+    cursor: pointer;
+    text-align: center;
+    line-height: 34px;
+    width: 69px;
+    height: 34px;
+    color: #5c7b98;
+}

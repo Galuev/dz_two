@@ -1,12 +1,21 @@
-<!DOCTYPE html>
+<!DOCTYPE html><!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"><![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"><![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"><![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"><![endif]-->
 <html>
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta name="viewport" content="width=device-width">
-    <meta name="description" content="сайт на джейде">
-    <link rel="stylesheet" type="text/css" href="css/normalize.css" media="screen, projection, print">
-    <link rel="stylesheet" type="text/css" href="css/screen.css" media="screen, projection, print">
+    <meta name="description" content="сайт на jade &amp; sass">
+    <link rel="stylesheet" type="text/css" href="bower/normalize.css/normalize.css" media="screen, projection, print">
+    <link rel="stylesheet" type="text/css" href="css/main.css" media="screen, projection, print">
+    <link rel="stylesheet" type="text/css" href="css/selecter.css" media="screen, projection, print">
+    <link link href="css/jquery.bxslider.css" rel="stylesheet">
     <link rel="stylesheet" href="fonts/elektra.css">
+    <link rel="stylesheet" href="css/jquery.qtip.css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <script src="bower/modernizr/modernizr.js"></script>
   </head>
   <title>JADE SITE</title>
   <script src="//"></script>
@@ -22,24 +31,24 @@
                 <form id="callback-form">
                   <div class="callback-form-group">
                     <label for="urName" class="callback-form-group__label">Ваше имя</label>
-                    <input type="text" name="urName" id="urName" placeholder="Константин" qtip-content="Вы не ввели имя" class="callback-form-group__input callback-form-group__input_short-input">
+                    <input type="text" name="urName" id="urName" placeholder="Константин" qtip-content="Вы не ввели имя" qtip-position="right" class="callback-form-group__input callback-form-group__input_short-input">
                   </div>
                   <div class="callback-form-group">
                     <label for="urPhone" class="callback-form-group__label">Телефон</label>
-                    <input type="text" name="urName" id="urPhone" placeholder="+7 (912)000-00-00" qtip-content="Вы не указали телефон" class="callback-form-group__input callback-form-group__input_short-input">
+                    <input type="text" name="urName" id="urPhone" placeholder="+7 (912)000-00-00" qtip-content="Вы не указали телефон" qtip-position="right" class="callback-form-group__input callback-form-group__input_short-input">
                   </div>
                   <div class="callback-form-group">
                     <label for="callbackDate" class="callback-form-group__label">Дата звонка</label>
-                    <select id="callbackDate" name="callbackDate" tabindex="1" form="callback-form">
-                      <option value="01">01</option>
-                      <option value="02">02</option>
-                      <option value="03">03</option>
-                      <option value="04">04</option>
-                      <option value="05">05</option>
-                      <option value="06">06</option>
-                      <option value="07">07</option>
-                      <option value="08">08</option>
-                      <option value="09">09</option>
+                    <select id="callbackDate" name="callbackDate" tabindex="1" form="callback-form" qtip-content="Вы не ввели комментарий" qtip-position="right" class="scroll-pane">
+                      <option value="1">01</option>
+                      <option value="2">02</option>
+                      <option value="3">03</option>
+                      <option value="4">04</option>
+                      <option value="5">05</option>
+                      <option value="6">06</option>
+                      <option value="7">07</option>
+                      <option value="8">08</option>
+                      <option value="9">09</option>
                       <option value="10">10</option>
                       <option value="11">11</option>
                       <option value="12">12</option>
@@ -63,23 +72,23 @@
                       <option value="30">30</option>
                       <option value="31">31</option>
                     </select>
-                    <select name="callbackMonth" tabindex="2" form="callback-form">
-                      <option value="January">01</option>
-                      <option value="February">02</option>
-                      <option value="March">03</option>
-                      <option value="April">04</option>
-                      <option value="May">05</option>
-                      <option value="June">06</option>
-                      <option value="July">07</option>
-                      <option value="August">08</option>
-                      <option value="September">09</option>
-                      <option value="October">10</option>
-                      <option value="November">11</option>
-                      <option value="December">12</option>
+                    <select name="callbackMonth" tabindex="2" form="callback-form" qtip-content="Вы не ввели комментарий" qtip-position="right">
+                      <option value="1">01</option>
+                      <option value="2">02</option>
+                      <option value="3">03</option>
+                      <option value="4">04</option>
+                      <option value="5">05</option>
+                      <option value="6">06</option>
+                      <option value="7">07</option>
+                      <option value="8">08</option>
+                      <option value="9">09</option>
+                      <option value="10">10</option>
+                      <option value="11">11</option>
+                      <option value="12">12</option>
                     </select>
                   </div>
                   <div class="callback-form-group">
-                    <textarea name="comment" rows="3" placeholder="Комментарий" qtip-content="Вы не ввели комментарий" class="callback-form-group__textarea"></textarea>
+                    <textarea name="comment" rows="3" placeholder="Комментарий" qtip-content="Вы не ввели комментарий" qtip-position="right" class="callback-form-group__textarea"></textarea>
                   </div>
                   <div class="callback-form-btn-group">
                     <button type="submit" class="callback-form-btn-group__btn callback-form-btn-group__btn_blue">Отправить</button>
@@ -90,15 +99,15 @@
             </div>
             <div class="gallery-wrap">
               <ul class="gallery-list">
-                <li class="gallery-list__item"><img src="img/gallery_01.jpg" alt="картинка природы" class="gallery-img"></li>
-                <li class="gallery-list__item"><img src="img/gallery_02.jpg" alt="картинка природы" class="gallery-img"></li>
-                <li class="gallery-list__item"><img src="img/gallery_03.jpg" alt="картинка природы" class="gallery-img"></li>
-                <li class="gallery-list__item"><img src="img/gallery_04.jpg" alt="картинка природы" class="gallery-img"></li>
-                <li class="gallery-list__item"><img src="img/gallery_05.jpg" alt="картинка природы" class="gallery-img"></li>
-                <li class="gallery-list__item"><img src="img/gallery_06.jpg" alt="картинка природы" class="gallery-img"></li>
-                <li class="gallery-list__item"><img src="img/gallery_07.jpg" alt="картинка природы" class="gallery-img"></li>
-                <li class="gallery-list__item"><img src="img/gallery_08.jpg" alt="картинка природы" class="gallery-img"></li>
-                <li class="gallery-list__item"><img src="img/gallery_09.jpg" alt="картинка природы" class="gallery-img"></li>
+                <li class="gallery-list__item"><img src="img/gallery_01.jpg" class="gallery-img"></li>
+                <li class="gallery-list__item"><img src="img/gallery_02.jpg" class="gallery-img"></li>
+                <li class="gallery-list__item"><img src="img/gallery_03.jpg" class="gallery-img"></li>
+                <li class="gallery-list__item"><img src="img/gallery_04.jpg" class="gallery-img"></li>
+                <li class="gallery-list__item"><img src="img/gallery_05.jpg" class="gallery-img"></li>
+                <li class="gallery-list__item"><img src="img/gallery_06.jpg" class="gallery-img"></li>
+                <li class="gallery-list__item"><img src="img/gallery_07.jpg" class="gallery-img"></li>
+                <li class="gallery-list__item"><img src="img/gallery_08.jpg" class="gallery-img"></li>
+                <li class="gallery-list__item"><img src="img/gallery_09.jpg" class="gallery-img"></li>
               </ul>
             </div>
             <adress class="contacts">
@@ -110,19 +119,17 @@
           </aside>
           <div class="right-column">
             <div class="hero-slider">
-              <div id="slides">
-                <btn id="prev" class="slidesjs-previous slidesjs-navigation btn-slide-prev">Пред.</btn>
-                <btn id="next" class="slidesjs-next slidesjs-navigation btn-slide-next">След.</btn>
-                <div class="hero-slider__slide">
+              <ul class="bxslider">
+                <li class="hero-slider__slide">
                   <div class="slide-info"><a href="#" class="slide-info__header">iMac за пол цены</a><span class="slide-info__body">Принеси свой старый Mac и получи скидку на новый!</span></div><img src="img/slide_01.jpg" alt="акция 1">
-                </div>
-                <div class="hero-slider__slide">
+                </li>
+                <li class="hero-slider__slide">
                   <div class="slide-info"><a href="#" class="slide-info__header">До 31 декабря, iPhone 4 за 9900 руб.</a><span class="slide-info__body">Нет денег на шестой iPhone? Купи себе четвертый!</span></div><img src="img/slide_02.jpg" alt="акция 2">
-                </div>
-                <div class="hero-slider__slide">
+                </li>
+                <li class="hero-slider__slide">
                   <div class="slide-info"><a href="#" class="slide-info__header">iMac за пол цены</a><span class="slide-info__body">Принеси свой старый Mac и получи скидку на новый!</span></div><img src="img/slide_03.jpg" alt="акция 3">
-                </div>
-              </div>
+                </li>
+              </ul>
             </div>
             <div class="good-box">
               <div class="goods-box__head"><span class="good-heading-span">
@@ -134,7 +141,9 @@
                       <div class="item-img-wrap">
                         <div class="item-img-box"><img src="img/item_01.jpg" alt="фото товара" class="item-pic"></div>
                       </div>
-                      <div class="item-name"><a href="#" class="good-link">Apple Thunderbolt Display 27"</a></div>
+                      <div class="item-name">
+                        <div class="item-name__inner"><a href="#" class="good-link">Apple Thunderbolt Display 27&quot;</a></div>
+                      </div>
                     </div>
                     <ul class="item-specs">
                       <li class="item-spec">
@@ -164,7 +173,9 @@
                       <div class="item-img-wrap">
                         <div class="item-img-box"><img src="img/item_02.jpg" alt="фото товара" class="item-pic"></div>
                       </div>
-                      <div class="item-name"><a href="#" class="good-link">iMac 27"</a></div>
+                      <div class="item-name">
+                        <div class="item-name__inner"><a href="#" class="good-link">iMac 27&quot;</a></div>
+                      </div>
                     </div>
                     <ul class="item-specs">
                       <li class="item-spec">
@@ -194,7 +205,9 @@
                       <div class="item-img-wrap">
                         <div class="item-img-box"><img src="img/item_03.jpg" alt="фото товара" class="item-pic"></div>
                       </div>
-                      <div class="item-name"><a href="#" class="good-link">iPhone 5s Gold</a></div>
+                      <div class="item-name">
+                        <div class="item-name__inner"><a href="#" class="good-link">iPhone 5s Gold</a></div>
+                      </div>
                     </div>
                     <ul class="item-specs">
                       <li class="item-spec">
@@ -232,7 +245,9 @@
                       <div class="item-img-wrap">
                         <div class="item-img-box"><img src="img/item_04.jpg" alt="фото товара" class="item-pic"></div>
                       </div>
-                      <div class="item-name"><a href="#" class="good-link">iPad Air Wi-Fi 128GB - Silver</a></div>
+                      <div class="item-name">
+                        <div class="item-name__inner"><a href="#" class="good-link">iPad Air Wi-Fi 128GB - Silver</a></div>
+                      </div>
                     </div>
                     <ul class="item-specs">
                       <li class="item-spec">
@@ -262,7 +277,9 @@
                       <div class="item-img-wrap">
                         <div class="item-img-box"><img src="img/item_05.jpg" alt="фото товара" class="item-pic"></div>
                       </div>
-                      <div class="item-name"><a href="#" class="good-link">Apple iPod nano 7G 16 ГБ Blue</a></div>
+                      <div class="item-name">
+                        <div class="item-name__inner"><a href="#" class="good-link">Apple iPod nano 7G 16 ГБ Blue</a></div>
+                      </div>
                     </div>
                     <ul class="item-specs">
                       <li class="item-spec">
@@ -292,7 +309,9 @@
                       <div class="item-img-wrap">
                         <div class="item-img-box"><img src="img/item_06.jpg" alt="фото товара" class="item-pic"></div>
                       </div>
-                      <div class="item-name"><a href="#" class="good-link">Роутер Wi-Fi Apple AirPort</a></div>
+                      <div class="item-name">
+                        <div class="item-name__inner"><a href="#" class="good-link">Роутер Wi-Fi Apple AirPort</a></div>
+                      </div>
                     </div>
                     <ul class="item-specs">
                       <li class="item-spec">
@@ -323,6 +342,9 @@
           </div>
         </div>
       </div>
+      <div class="btnup_container">
+        <div id="toTop" class="whitecolor">Наверх</div>
+      </div>
     </div>
     <footer class="footer-main">
       <div class="footer">
@@ -330,7 +352,7 @@
           <div class="footer-logo-wrap"><img src="img/logo_footer.png" class="footer-logo"></div>
           <div class="footer-menu">
             <ul class="menu-list-outter">
-              <li class="menu-list-outter__item">О магазине
+              <li class="menu-list-outter__item"><span>О магазине</span>
                 <ul class="menu-list-inner">
                   <li class="menu-list-inner__item"><a href="#" class="menu-list-inner__a">О нас</a></li>
                   <li class="menu-list-inner__item"><a href="#" class="menu-list-inner__a">Наши цены</a></li>
@@ -338,7 +360,7 @@
                   <li class="menu-list-inner__item"><a href="#" class="menu-list-inner__a">Акции</a></li>
                 </ul>
               </li>
-              <li class="menu-list-outter__item">Каталог
+              <li class="menu-list-outter__item"><span>Каталог</span>
                 <ul class="menu-list-inner">
                   <li class="menu-list-inner__item"><a href="#" class="menu-list-inner__a">Смартфоны</a></li>
                   <li class="menu-list-inner__item"><a href="#" class="menu-list-inner__a">Планшеты</a></li>
@@ -346,7 +368,7 @@
                   <li class="menu-list-inner__item"><a href="#" class="menu-list-inner__a">Аксессуары</a></li>
                 </ul>
               </li>
-              <li class="menu-list-outter__item">Контакты
+              <li class="menu-list-outter__item"><span>Контакты</span>
                 <ul class="menu-list-inner">
                   <li class="menu-list-inner__item"><a href="#" class="menu-list-inner__a">Телефоны</a></li>
                   <li class="menu-list-inner__item"><a href="#" class="menu-list-inner__a">Адреса</a></li>
@@ -365,9 +387,9 @@
             </div>
             <div class="links-socials">
               <ul class="links-socials__list">
-                <li class="links-socials__item"><a href="#" class="vk">VK</a></li>
-                <li class="links-socials__item"><a href="#" class="fb">FB</a></li>
-                <li class="links-socials__item"><a href="#" class="tw">TW</a></li>
+                <li class="links-socials__item"><a href="#" class="vk"></a></li>
+                <li class="links-socials__item"><a href="#" class="fb"></a></li>
+                <li class="links-socials__item"><a href="#" class="tw"></a></li>
               </ul>
             </div>
           </div>
@@ -375,31 +397,57 @@
       </div>
     </footer>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
-    <script src="js/jquery.slides.min.js"></script>
+    <script>window.jQuery || document.write('<script src="bower/jquery/jquery.min.js">')</script>
+    <script src="bower/selecter/src/jquery.fs.selecter.js"></script>
     <script>
-      $(function(){
-        $("#slides").slidesjs({
-          width: 740,
-          height: 300,
-          pagination: {
-              active: false,
-              effect: "slide"
-              },
-          navigation: {
-            active: false,
-            effect: "slide"
-          }
-      
-        });
-        $('#next').hover(
-                 function(){ $(this).addClass('next-hv') },
-                 function(){ $(this).removeClass('next-hv') }
-          );
-        $('#prev').hover(
-                 function(){ $(this).addClass('prev-hv') },
-                 function(){ $(this).removeClass('prev-hv') }
-          );
+      $(document).ready(function(){
+          $('select').selecter();
       });
+      
+      
     </script>
+    <script src="js/jquery.bxslider.js"></script>
+    <script>
+      $(document).ready(function(){
+          $('.bxslider').bxSlider({
+              pager: false,
+              auto: true
+              });
+      });
+      
+      
+    </script>
+    <script>
+      $(function() {
+      
+      $(document).ready(function(){
+          $('#toTop').addClass('btnup');
+      });
+      
+      $(window).scroll(function() {
+      
+      if($(this).scrollTop() != 0) {
+      
+      $('#toTop').fadeIn();
+      
+      } else {
+      
+      $('#toTop').fadeOut();
+      
+      }
+      
+      });
+      
+      $('#toTop').click(function() {
+      
+      $('body,html').animate({scrollTop:0},800);
+      
+      });
+      
+      });
+      
+    </script>
+    <script src="bower/jquery-placeholder/jquery.placeholder.min.js"></script>
+    <script>$('input, textarea').placeholder({ customClass: 'my-placeholder' });</script>
   </body>
 </html>

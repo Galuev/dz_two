@@ -1,0 +1,46 @@
+footer.footer-main
+    .footer
+        .container
+            .footer-logo-wrap
+                img(src="img/logo_footer.png" class="footer-logo")
+            .footer-menu
+                ul.menu-list-outter
+                    li.menu-list-outter__item
+                        span О магазине
+                        ul.menu-list-inner
+                            each menulist in ['О нас','Наши цены','Наши скидки', 'Акции']
+                                li.menu-list-inner__item
+                                    a(href="#" class="menu-list-inner__a") #{menulist}
+
+                    li.menu-list-outter__item
+                        span Каталог
+                        ul.menu-list-inner
+                            each menulist in ['Смартфоны','Планшеты','Компьютеры', 'Аксессуары']
+                                li.menu-list-inner__item
+                                    a(href="#" class="menu-list-inner__a") #{menulist}
+
+                    li.menu-list-outter__item
+                        span Контакты
+                        ul.menu-list-inner
+                            each menulist in ['Телефоны','Адреса','Карта проезда', 'Обратная связь']
+                                li.menu-list-inner__item
+                                    a(href="#" class="menu-list-inner__a") #{menulist}
+            .footer-links-wrap
+                        .links-stores
+                            ul.links-stores__list
+                                li.links-stores__item
+                                    a(href="http://itunes.apple.com/ru/genre/ios/id36?mt=8" class="app-store") APP STORE
+                                li.links-stores__item
+                                    a(href="https://play.google.com/store?hl=ru" class="gplay") GPLAY
+                        .links-socials
+                            ul.links-socials__list
+                                each social in ['vk','fb','tw']
+                                    li.links-socials__item
+                                        a(href="#" class= social)
+
+                                //- li.links-socials__item
+                                //-     a(href="#" class="vk") VK
+                                //- li.links-socials__item
+                                //-     a(href="#" class="fb") FB
+                                //- li.links-socials__item
+                                //-     a(href="#" class="tw") TW
